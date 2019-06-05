@@ -15,15 +15,18 @@ def sort_array_char_count(array)
 end
 
 def swap_elements(array)
+    # swap the second and third elements of an array
     array[1], array[2] = array[2], array[1]
     array
 end
 
 def reverse_array(array)
+    # reverse the order of an array of integers
     array.reverse
 end
 
 def kesha_maker(array)
+    # taking an array as an input, change the 3rd character of each element to a dollar sign.
     new_array = []
     array.each do |str|
         str[2] = "$"
@@ -33,6 +36,7 @@ def kesha_maker(array)
 end
 
 def find_a(array)
+    # find all words that begin with "a" in the following array
     new_array = []
     array.each do |str|
         if str.start_with?("a")
@@ -43,10 +47,12 @@ def find_a(array)
 end
 
 def sum_array(array)
+    # sum all the numbers in the following array
     array.inject{|sum,num| sum+num}
 end
 
 def add_s(array)
+    # Add an "s" to each word in the array except for the 2nd element in the array
     array.each_with_index.collect do |element, index| 
         index != 1 ? element << "s" : element << ""
     end
